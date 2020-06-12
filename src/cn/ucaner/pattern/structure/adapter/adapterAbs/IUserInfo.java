@@ -11,27 +11,48 @@
 package cn.ucaner.pattern.structure.adapter.adapterAbs;
 
 /**
-* @Package：cn.ucaner.pattern.structure.adapter.adapterAbs   
-* @ClassName：IUserInfo   
+* @Package：cn.ucaner.pattern.structure.adapter.adapterAbs
+* @ClassName：IUserInfo
 * @Description：   <p> 适配器模式 - -抽象用户类 </p>
-* @Author： -  
-* @CreatTime：2017年10月26日 下午6:03:19   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
+* @Author： -
+* @CreatTime：2017年10月26日 下午6:03:19
+* @Modify By：
+* @ModifyTime：
+* @Modify marker：
 * @version    V1.0
  */
 public interface IUserInfo {
 
-	//user信息
+    /**
+     * user信息
+     * @return
+     */
 	String getUserName();
+
+    /**
+     * 家庭地址
+     * @return
+     */
     String getHomeAddress();
+
+    /**
+     * 手机号
+     * @return
+     */
     String getMobileNumber();
+
+    /**
+     * 性别
+     * @return
+     */
     String getSex();
-    
-    //job信息
+
+    /**
+     * job信息
+     * @return
+     */
     String getJobPosition();
-    
-    
-    
+
+
+
 }

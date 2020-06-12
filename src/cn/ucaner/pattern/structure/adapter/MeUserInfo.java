@@ -1,27 +1,17 @@
-/**
- * <html>
- * <body>
- *  <P> Copyright 1994 JsonInternational</p>
- *  <p> All rights reserved.</p>
- *  <p> Created on 19941115</p>
- *  <p> Created by Jason</p>
- *  </body>
- * </html>
- */
 package cn.ucaner.pattern.structure.adapter;
 
 import cn.ucaner.pattern.structure.adapter.adapterAbs.IUserInfo;
 
 /**
-* @Package：cn.ucaner.pattern.structure.adapter   
-* @ClassName：MeUserInfo   
-* @Description：   <p> 适配器模式  --- 我们自己的用户类</p>
-* @Author： -  
-* @CreatTime：2017年10月26日 下午6:02:39   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
-* @version    V1.0
+ * @version V1.0
+ * @Package：cn.ucaner.pattern.structure.adapter
+ * @ClassName：MeUserInfo
+ * @Description： <p> 适配器模式  --- 我们自己的用户类</p>
+ * @Author： -
+ * @CreatTime：2017年10月26日 下午6:02:39
+ * @Modify By：
+ * @ModifyTime：
+ * @Modify marker：
  */
 public class MeUserInfo implements IUserInfo {
 
@@ -33,8 +23,7 @@ public class MeUserInfo implements IUserInfo {
 
     @Override
     public String getHomeAddress() {
-        System.out.print("员工住址");
-        return null;
+        return "员工住址";
     }
 
     @Override
@@ -55,12 +44,5 @@ public class MeUserInfo implements IUserInfo {
         return null;
     }
 
-	@Override
-	public String toString() {
-		return "MeUserInfo [getUserName()=" + getUserName() + ", getHomeAddress()=" + getHomeAddress()
-				+ ", getMobileNumber()=" + getMobileNumber() + ", getSex()=" + getSex() + ", getJobPosition()="
-				+ getJobPosition() + "]";
-	}
-    
-    
+
 }
