@@ -13,15 +13,15 @@ package cn.ucaner.pattern.structure.bridge;
 import cn.ucaner.pattern.structure.bridge.abs.Implementor;
 
 /**
-*    
-* @Package：cn.ucaner.pattern.structure.bridge   
-* @ClassName：BridgeMain   
+*
+* @Package：cn.ucaner.pattern.structure.bridge
+* @ClassName：BridgeMain
 * @Description：   <p> 桥接模式  -- 执行类</p>
-* @Author： - 
-* @CreatTime：2017年10月26日 下午5:59:16   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
+* @Author： -
+* @CreatTime：2017年10月26日 下午5:59:16
+* @Modify By：
+* @ModifyTime：
+* @Modify marker：
 * @version    V1.0
  */
 public class BridgeMain {
@@ -32,17 +32,17 @@ public class BridgeMain {
     	 * 实现化角色
     	 */
         Implementor implementor = new ConcreteImplementor();
-        
+
         /**
          * 抽象化角色
          */
         RefinedAbstraction refinedAbstraction = new RefinedAbstraction(implementor);
-        
+
         /**
          * 抽象化角色搞事情
          */
         refinedAbstraction.doSomethings();
-        
+        //实现类搞事情
         implementor.doSomethingA();
         implementor.doSomethingB();
     }
