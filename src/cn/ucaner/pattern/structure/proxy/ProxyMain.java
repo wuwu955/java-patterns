@@ -1,13 +1,3 @@
-/**
- * <html>
- * <body>
- *  <P> Copyright 1994 JsonInternational</p>
- *  <p> All rights reserved.</p>
- *  <p> Created on 19941115</p>
- *  <p> Created by Jason</p>
- *  </body>
- * </html>
- */
 package cn.ucaner.pattern.structure.proxy;
 
 import cn.ucaner.pattern.structure.proxy.dynamicProxy.RealSujectImpl;
@@ -17,22 +7,22 @@ import cn.ucaner.pattern.structure.proxy.staticProxy.Proxy;
 import cn.ucaner.pattern.structure.proxy.staticProxy.RealSuject;
 
 /**
-* @Package：cn.ucaner.pattern.structure.proxy   
-* @ClassName：ProxyMain   
-* @Description：   <p> 代理模式运行类</p>
-* @Author： -  
-* @CreatTime：2017年10月26日 下午1:45:08   
-* @Modify By：   
-* @ModifyTime：  
-* @Modify marker：   
-* @version    V1.0
+ * @version V1.0
+ * @Package：cn.ucaner.pattern.structure.proxy
+ * @ClassName：ProxyMain
+ * @Description： <p> 代理模式运行类</p>
+ * @Author： -
+ * @CreatTime：2017年10月26日 下午1:45:08
+ * @Modify By：
+ * @ModifyTime：
+ * @Modify marker：
  */
 public class ProxyMain {
 
     public static void main(String[] args) {
-    	//静态代理
-    	staticProxy();
-    	//动态代理
+        //静态代理
+        staticProxy();
+        //动态代理
         dynamicProxy();
     }
 
@@ -45,13 +35,15 @@ public class ProxyMain {
         proxy.request();
     }
 
-   /**
-    * 动态代理
-    */
-    private static void dynamicProxy(){
-        RealSujectImpl realSubject=new RealSujectImpl();
-        SubjectInvocationHandler handler=new SubjectInvocationHandler(realSubject);
-        Subject subject= (Subject) handler.getProxy();
+    /**
+     * 动态代理
+     */
+    private static void dynamicProxy() {
+        RealSujectImpl realSubject = new RealSujectImpl();
+        SubjectInvocationHandler handler = new SubjectInvocationHandler(realSubject);
+        //生成代理对象
+        Subject subject = (Subject) handler.getProxy();
+        //代理对象的invoke 方法
         subject.request();
     }
 }
