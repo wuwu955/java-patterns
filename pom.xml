@@ -3,28 +3,55 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
-	<!-- 
-		This is a opensource porject. 
-		
+
+	<!--
+		This is a opensource porject.
+
 		TODO:
 			1.将代码申请发布到中央仓库
 			2.https://issues.sonatype.org/browse/OSSRH-43324
 			3.
 	 -->
-	 
-	 
-	 
+
+
+
 	<!-- 项目管理-->
  	<name>Java-Patterns</name>
-	<description>This is a Java-Patterns Learing Porject Designed  by Jason.</description> 
-	
+	<description>This is a Java-Patterns Learing Porject Designed  by Jason.</description>
+
 	<groupId>cn.ucaner</groupId>
 	<artifactId>patterns</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	
-	
+	<properties>
+		<lombok.version>1.16.10</lombok.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+	</dependencies>
+
 	<!-- BULID -->
     <build>
         <plugins>
@@ -38,7 +65,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <!-- LICENSES  -->
     <licenses>
 	 	<license>
@@ -47,7 +74,7 @@
 	      	<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<!-- DEVELOPERS  -->
 	<developers>
 		<developer>
