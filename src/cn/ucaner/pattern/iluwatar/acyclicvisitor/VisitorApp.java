@@ -34,7 +34,7 @@ package cn.ucaner.pattern.iluwatar.acyclicvisitor;
  * ConfigureForUnixVisitor} and {@link ConfigureForDosVisitor} implement each derivative's visit
  * method only if it is required
  */
-public class App {
+public class VisitorApp {
 
   /**
    * Program's entry point.

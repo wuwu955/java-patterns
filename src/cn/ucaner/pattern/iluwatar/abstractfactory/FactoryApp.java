@@ -22,7 +22,7 @@
  */
 
 package cn.ucaner.pattern.iluwatar.abstractfactory;
-import cn.ucaner.pattern.iluwatar.abstractfactory.App.FactoryMaker.KingdomType;
+import cn.ucaner.pattern.iluwatar.abstractfactory.FactoryApp.FactoryMaker.KingdomType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,9 +41,9 @@ import org.slf4j.LoggerFactory;
  * and its implementations ( {@link ElfKingdomFactory}, {@link OrcKingdomFactory}). The example uses
  * both concrete implementations to create a king, a castle and an army.
  */
-public class App {
+public class FactoryApp {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(FactoryApp.class);
 
   private King king;
   private Castle castle;
@@ -128,7 +128,7 @@ public class App {
    */
   public static void main(String[] args) {
 
-    App app = new App();
+    FactoryApp app = new FactoryApp();
 
     LOGGER.info("Elf Kingdom");
     app.createKingdom(FactoryMaker.makeFactory(KingdomType.ELF));
